@@ -57,78 +57,67 @@ public class DataHelper {
     }
 
     // restituisce una lista di numeri casuali NON DUPLICATI compresi tra 0 e 10
-    public static Map<Integer, Integer> getRandomUniqueInteger(int size) {
+    public static List<Integer> getRandomUniqueInteger(int size) {
 
         List<Integer> intList = getRandomInteger(size);
-        Map<Integer, Integer> listToReturn = new HashMap<>();
+        List<Integer> listToReturn = new ArrayList<>();
 
         for (int x = 0; x < intList.size(); x++) {
 
-            if (listToReturn.containsKey(x)) {
-
-                int updatedValue = listToReturn.get(x);
-
-                listToReturn.put(intList.get(x), updatedValue + 1);
-            } else {
-
-                listToReturn.put(intList.get(x), 1);
-            }
-
+            listToReturn.add(intList.get(x));
         }
 
         return listToReturn;
     }
 
     // // restituisce una lista di numeri casuali NON DUPLICATI compresi tra 0 e max
-    public static Map<Integer, Integer> getRandomUniqueInteger(int size, int max) {
+    public static List<Integer> getRandomUniqueInteger(int size, int max) {
 
         List<Integer> intList = getRandomInteger(size, max);
-        Map<Integer, Integer> listToReturn = new HashMap<>();
+        List<Integer> listToReturn = new ArrayList<>();
 
         for (int x = 0; x < intList.size(); x++) {
 
-            if (listToReturn.containsKey(x)) {
-
-                int updatedValue = listToReturn.get(x);
-
-                listToReturn.put(intList.get(x), updatedValue + 1);
-            } else {
-
-                listToReturn.put(intList.get(x), 1);
-            }
-
+            listToReturn.add(intList.get(x));
         }
 
         return listToReturn;
     }
 
     // // restituisce una lista di numeri casuali NON DUPLICATI compresi tra min e max
-    public static Map<Integer, Integer> getRandomUniqueInteger(int size, int min, int max) {
+    public static List<Integer> getRandomUniqueInteger(int size, int min, int max) {
 
         List<Integer> intList = getRandomInteger(size, min, max);
-        Map<Integer, Integer> listToReturn = new HashMap<>();
+        List<Integer> listToReturn = new ArrayList<>();
 
         for (int x = 0; x < intList.size(); x++) {
 
-            if (listToReturn.containsKey(x)) {
-
-                int updatedValue = listToReturn.get(x);
-
-                listToReturn.put(intList.get(x), updatedValue + 1);
-            } else {
-
-                listToReturn.put(intList.get(x), 1);
-            }
-
+            listToReturn.add(intList.get(x));
         }
 
         return listToReturn;
     }
 
     // restituisce una mappa di frequenza di numeri interi
-    // public static ??? getFrequencyMap(List<Integer> list) {
-    //
-    // return null;
-    // }
+    public static Map<Integer, Integer> getFrequencyMap(List<Integer> list) {
+
+        Map<Integer, Integer> listToReturn = new HashMap<>();
+
+        for (int x = 0; x < list.size(); x++) {
+
+            if (listToReturn.containsKey(x)) {
+
+                int updatedValue = listToReturn.get(x);
+
+                listToReturn.put(list.get(x), updatedValue + 1);
+            } else {
+
+                listToReturn.put(list.get(x), 1);
+            }
+
+        }
+
+        return listToReturn;
+    }
 
 }
