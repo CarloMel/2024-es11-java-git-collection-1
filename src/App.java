@@ -20,27 +20,18 @@ public class App {
      */
 
     public static void main(String[] args) throws Exception {
-
-        // getRandomIntegerTester();
-        // getRandomIntegerTesterMaxSize();
-        getRandomIntegerTesterMaxAndMinSize();
+        testRandomInteger();
     }
 
-    public static void getRandomIntegerTester() {
+    public static void testRandomInteger() {
 
-        DataHelper dh = new DataHelper();
-        System.out.println(dh.getRandomInteger(10));
-    }
+        DataHelper datahelperRandom = new DataHelper();
 
-    public static void getRandomIntegerTesterMaxSize() {
-
-        DataHelper dh = new DataHelper();
-        System.out.println(dh.getRandomInteger(8,100));
-    }
-
-    public static void getRandomIntegerTesterMaxAndMinSize() {
-
-        DataHelper dh = new DataHelper();
-        System.out.println(dh.getRandomInteger(5,100, 200));
+        System.out.println("restituisce una lista di numeri interi casuali compresi tra 0 e 10 (size 3)");
+        System.out.println(datahelperRandom.getRandomInteger(3));
+        System.out.println("restituisce una lista di numeri interi casuali compresi tra 0 e max (size 3, max 10)");
+        System.out.println(datahelperRandom.getRandomInteger(3, 10));
+        System.out.println("restituisce una lista di numeri interi casuali compresi tra min e max (size 3 min 100 max 300)");
+        System.out.println(datahelperRandom.getRandomInteger(3,100,300));
     }
 }
