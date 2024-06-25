@@ -64,10 +64,19 @@ public class DataHelper {
 
         for (int x = 0;  x < intList.size(); x++) {
 
-            int mapCounter = 0;
-            listToReturn.put(intList.get(x), mapCounter + 1);
+            if (listToReturn.containsKey(x)) {
+                
+                int updatedValue = listToReturn.get(x);
+
+                listToReturn.put(intList.get(x), updatedValue + 1);
+            } else {
+                
+                listToReturn.put(intList.get(x), 1);
+            }
+
 
         }
+
     return listToReturn;
     }
 
