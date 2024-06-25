@@ -20,6 +20,20 @@ public class App {
      */
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+
+        // getRandomIntegerTester();
+        getRandomIntegerTesterMaxSize();
+    }
+
+    public static void getRandomIntegerTester() {
+
+        DataHelper dh = new DataHelper();
+        System.out.println(dh.getRandomInteger(10));
+    }
+
+    public static void getRandomIntegerTesterMaxSize() {
+
+        DataHelper dh = new DataHelper();
+        System.out.println(dh.getRandomInteger(8,100));
     }
 }

@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class DataHelper {
 
@@ -7,13 +9,33 @@ public class DataHelper {
     // restituisce una lista di numeri interi casuali compresi tra 0 e 10
     public static List<Integer> getRandomInteger(int size) {
 
-        return null;
+        List<Integer> listToReturn = new ArrayList<>();
+        Random random = new Random();
+
+        for (int x = 0; x < size; x++) {
+
+            // genera numero tra 1 e 10
+            int randomNumber = random.nextInt(11);
+            listToReturn.add(randomNumber);
+        }
+
+        return listToReturn;
     }
 
     // restituisce una lista di numeri interi casuali compresi tra 0 e max
     public static List<Integer> getRandomInteger(int size, int max) {
 
-        return null;
+        List<Integer> listToReturn = new ArrayList<>();
+        Random random = new Random();
+
+        for (int x = 0; x < size; x++) {
+
+            // genera numero tra 1 e 10
+            int randomNumber = random.nextInt(max + 1);
+            listToReturn.add(randomNumber);
+        }
+
+        return listToReturn;
     }
 
     // restituisce una lista di numeri interi casuali compresi tra min e max
