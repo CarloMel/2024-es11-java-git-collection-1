@@ -102,12 +102,28 @@ public class DataHelper {
         return listToReturn;
     }
 
-    // // restituisce una lista di numeri casuali NON DUPLICATI compresi tra min e
-    // max
-    // public static ??? getRandomUniqueInteger(int size, int min, int max) {
-    //
-    // return null;
-    // }
+    // // restituisce una lista di numeri casuali NON DUPLICATI compresi tra min e max
+    public static Map<Integer, Integer> getRandomUniqueInteger(int size, int min, int max) {
+
+        List<Integer> intList = getRandomInteger(size, min, max);
+        Map<Integer, Integer> listToReturn = new HashMap<>();
+
+        for (int x = 0; x < intList.size(); x++) {
+
+            if (listToReturn.containsKey(x)) {
+
+                int updatedValue = listToReturn.get(x);
+
+                listToReturn.put(intList.get(x), updatedValue + 1);
+            } else {
+
+                listToReturn.put(intList.get(x), 1);
+            }
+
+        }
+
+        return listToReturn;
+    }
 
     // restituisce una mappa di frequenza di numeri interi
     // public static ??? getFrequencyMap(List<Integer> list) {

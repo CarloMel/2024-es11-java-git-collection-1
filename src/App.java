@@ -43,10 +43,13 @@ public class App {
 
         DataHelper datahelperRandomUnique = new DataHelper();
 
-        System.out.println("restituisce una lista di numeri interi casuali compresi tra 0 e 10 SENZA RIPETIZIONI (size 3)");
+        System.out.println("restituisce una lista di numeri interi casuali compresi tra 0 e 10 SENZA RIPETIZIONI (size 10)");
         System.out.println(datahelperRandomUnique.getRandomUniqueInteger(10));
 
-        System.out.println("restituisce una lista di numeri interi casuali compresi tra 0 e max SENZA RIPETIZIONI (size 3, max 100)");
+        System.out.println("restituisce una lista di numeri interi casuali compresi tra 0 e max SENZA RIPETIZIONI (size 10, max 100)");
         System.out.println(datahelperRandomUnique.getRandomUniqueInteger(10, 100));
+
+        System.out.println("restituisce una lista di numeri interi casuali compresi tra min e max SENZA RIPETIZIONI (size 10, min 100, max 200)");
+        System.out.println(datahelperRandomUnique.getRandomUniqueInteger(10, 100, 200));
     }
 }
