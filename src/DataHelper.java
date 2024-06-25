@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 public class DataHelper {
@@ -55,10 +57,19 @@ public class DataHelper {
     }
 
     // restituisce una lista di numeri casuali NON DUPLICATI compresi tra 0 e 10
-    // public static ??? getRandomUniqueInteger(int size) {
-    //
-    // return null;
-    // }
+    public static Map<Integer,Integer> getRandomUniqueInteger(int size) {
+    
+        List<Integer> intList = getRandomInteger(size);
+        Map<Integer, Integer> listToReturn = new HashMap<>();
+
+        for (int x = 0;  x < intList.size(); x++) {
+
+            int mapCounter = 0;
+            listToReturn.put(intList.get(x), mapCounter + 1);
+
+        }
+    return listToReturn;
+    }
 
     // // restituisce una lista di numeri casuali NON DUPLICATI compresi tra 0 e max
     // public static ??? getRandomUniqueInteger(int size, int max) {

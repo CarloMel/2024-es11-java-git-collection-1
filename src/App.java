@@ -20,7 +20,9 @@ public class App {
      */
 
     public static void main(String[] args) throws Exception {
-        testRandomInteger();
+
+        // testRandomInteger();
+        testRandomUniqueInteger();
     }
 
     public static void testRandomInteger() {
@@ -33,5 +35,11 @@ public class App {
         System.out.println(datahelperRandom.getRandomInteger(3, 10));
         System.out.println("restituisce una lista di numeri interi casuali compresi tra min e max (size 3 min 100 max 300)");
         System.out.println(datahelperRandom.getRandomInteger(3,100,300));
+    }
+
+    public static void testRandomUniqueInteger() {
+
+        DataHelper datahelperRandomUnique = new DataHelper();
+        System.out.println(datahelperRandomUnique.getRandomUniqueInteger(10));
     }
 }
