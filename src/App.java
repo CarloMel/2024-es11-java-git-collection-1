@@ -31,8 +31,10 @@ public class App {
 
         System.out.println("restituisce una lista di numeri interi casuali compresi tra 0 e 10 (size 3)");
         System.out.println(datahelperRandom.getRandomInteger(3));
+
         System.out.println("restituisce una lista di numeri interi casuali compresi tra 0 e max (size 3, max 10)");
         System.out.println(datahelperRandom.getRandomInteger(3, 10));
+
         System.out.println("restituisce una lista di numeri interi casuali compresi tra min e max (size 3 min 100 max 300)");
         System.out.println(datahelperRandom.getRandomInteger(3,100,300));
     }
@@ -40,6 +42,11 @@ public class App {
     public static void testRandomUniqueInteger() {
 
         DataHelper datahelperRandomUnique = new DataHelper();
+
+        System.out.println("restituisce una lista di numeri interi casuali compresi tra 0 e 10 SENZA RIPETIZIONI (size 3)");
         System.out.println(datahelperRandomUnique.getRandomUniqueInteger(10));
+
+        System.out.println("restituisce una lista di numeri interi casuali compresi tra 0 e max SENZA RIPETIZIONI (size 3, max 100)");
+        System.out.println(datahelperRandomUnique.getRandomUniqueInteger(10, 100));
     }
 }

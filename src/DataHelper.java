@@ -57,34 +57,50 @@ public class DataHelper {
     }
 
     // restituisce una lista di numeri casuali NON DUPLICATI compresi tra 0 e 10
-    public static Map<Integer,Integer> getRandomUniqueInteger(int size) {
-    
+    public static Map<Integer, Integer> getRandomUniqueInteger(int size) {
+
         List<Integer> intList = getRandomInteger(size);
         Map<Integer, Integer> listToReturn = new HashMap<>();
 
-        for (int x = 0;  x < intList.size(); x++) {
+        for (int x = 0; x < intList.size(); x++) {
 
             if (listToReturn.containsKey(x)) {
-                
+
                 int updatedValue = listToReturn.get(x);
 
                 listToReturn.put(intList.get(x), updatedValue + 1);
             } else {
-                
+
                 listToReturn.put(intList.get(x), 1);
             }
 
-
         }
 
-    return listToReturn;
+        return listToReturn;
     }
 
     // // restituisce una lista di numeri casuali NON DUPLICATI compresi tra 0 e max
-    // public static ??? getRandomUniqueInteger(int size, int max) {
-    //
-    // return null;
-    // }
+    public static Map<Integer, Integer> getRandomUniqueInteger(int size, int max) {
+
+        List<Integer> intList = getRandomInteger(size, max);
+        Map<Integer, Integer> listToReturn = new HashMap<>();
+
+        for (int x = 0; x < intList.size(); x++) {
+
+            if (listToReturn.containsKey(x)) {
+
+                int updatedValue = listToReturn.get(x);
+
+                listToReturn.put(intList.get(x), updatedValue + 1);
+            } else {
+
+                listToReturn.put(intList.get(x), 1);
+            }
+
+        }
+
+        return listToReturn;
+    }
 
     // // restituisce una lista di numeri casuali NON DUPLICATI compresi tra min e
     // max
