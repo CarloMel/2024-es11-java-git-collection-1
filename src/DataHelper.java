@@ -104,15 +104,16 @@ public class DataHelper {
         Map<Integer, Integer> listToReturn = new HashMap<>();
 
         for (int x = 0; x < list.size(); x++) {
+            int number = list.get(x);
 
-            if (listToReturn.containsKey(x)) {
+            if (listToReturn.containsKey(number)) {
 
-                int updatedValue = listToReturn.get(x);
+                int updatedValue = listToReturn.get(number);
 
-                listToReturn.put(list.get(x), updatedValue + 1);
+                listToReturn.put(number, updatedValue + 1);
             } else {
 
-                listToReturn.put(list.get(x), 1);
+                listToReturn.put(number, 1);
             }
 
         }
