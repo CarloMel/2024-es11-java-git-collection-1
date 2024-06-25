@@ -55,7 +55,7 @@ public class App {
         System.out.println("restituisce una lista di numeri interi casuali compresi tra min e max SENZA RIPETIZIONI (size 9, min 100, max 200)");
         System.out.println(datahelperRandomUnique.getRandomUniqueInteger(9, 100, 200));
 
-        System.out.println("Numeri mappati (casuali compresi tra 0 e 10)");
+        System.out.println("Numeri mappati (casuali compresi tra 0 e 10 [size: 10])");
         List<Integer> listOfInteger = new ArrayList<>();
         listOfInteger = datahelperRandomUnique.getRandomInteger(10);
         System.out.println(datahelperRandomUnique.getFrequencyMap(listOfInteger));
