@@ -41,7 +41,17 @@ public class DataHelper {
     // restituisce una lista di numeri interi casuali compresi tra min e max
     public static List<Integer> getRandomInteger(int size, int min, int max) {
 
-        return null;
+        List<Integer> listToReturn = new ArrayList<>();
+        Random random = new Random();
+
+        for (int x = 0; x < size; x++) {
+
+            // genera numero tra 1 e 10
+            int randomNumber = random.nextInt(max - min + 1) + min;
+            listToReturn.add(randomNumber);
+        }
+
+        return listToReturn;
     }
 
     // restituisce una lista di numeri casuali NON DUPLICATI compresi tra 0 e 10

@@ -22,7 +22,8 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         // getRandomIntegerTester();
-        getRandomIntegerTesterMaxSize();
+        // getRandomIntegerTesterMaxSize();
+        getRandomIntegerTesterMaxAndMinSize();
     }
 
     public static void getRandomIntegerTester() {
@@ -35,5 +36,11 @@ public class App {
 
         DataHelper dh = new DataHelper();
         System.out.println(dh.getRandomInteger(8,100));
+    }
+
+    public static void getRandomIntegerTesterMaxAndMinSize() {
+
+        DataHelper dh = new DataHelper();
+        System.out.println(dh.getRandomInteger(5,100, 200));
     }
 }
